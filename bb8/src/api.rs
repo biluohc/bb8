@@ -273,7 +273,8 @@ where
         }
     }
 
-    pub(crate) fn drop_invalid(mut self) {
+    /// drop this connection
+    pub fn drop_invalid(mut self) {
         let _ = self.conn.take();
     }
 }
